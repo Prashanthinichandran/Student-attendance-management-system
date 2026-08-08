@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Attendance Management System</h1>
+        <p>Manage student attendance easily</p>
+<p id="currentDate"></p>
+    </header>
+
+    <main>
+
+        <section class="dashboard">
+            <div class="card">
+                <h3>Total Students</h3>
+                <p id="totalStudents">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Present</h3>
+                <p id="presentStudents">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Absent</h3>
+                <p id="absentStudents">0</p>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Add Student</h2>
+
+            <input type="text" id="studentName" placeholder="Enter student name">
+
+            <input type="text" id="registerNumber" placeholder="Enter register number">
+
+            <button onclick="addStudent()">Add Student</button>
+        </section>
+
+        <section class="student-section">
+            <div class="section-header">
+    <div>
+        <h2>Student Attendance</h2>
+        <p>Mark and monitor daily attendance</p>
+    </div>
+
+    <button class="reset-btn" onclick="resetAttendance()">
+        Reset Attendance
+    </button>
+</div>
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search student..."
+                onkeyup="searchStudent()"
+            >
+
+            <table>
+                <thead>
+       <tr>
+    <th>S.No</th>
+    <th>Name</th>
+    <th>Register No</th>
+    <th>Attendance</th>
+    <th>Percentage</th>
+<th>Status</th>
+    <th>Mark Attendance</th>
+    <th>Action</th>
+       </tr>
+                </thead>
+
+                <tbody id="studentTable">
+                    <!-- Students will appear here -->
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
