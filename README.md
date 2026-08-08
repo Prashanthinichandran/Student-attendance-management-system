@@ -1,5 +1,4 @@
 # Student Attendance Management System
-
  Project Description
 The Student Attendance Management System is a simple web-based project developed to manage and track student attendance efficiently.
 
